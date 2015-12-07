@@ -1,0 +1,37 @@
+﻿1.
+Att instantiera en typ innebär att deklarera bland annat ett Namn och en struktur till en typ (en mall).
+Namnet är såklart viktigt, annars existerar den inte.
+ 
+2. 
+Den kan även kallas för Objekt.
+
+3.
+värde typer
+int
+bool
+double
+char
+
+Ref typer
+string
+object
+
+
+4. 
+Olika värdetyper som kan skapas
+Array - håller object
+List - håller i värden
+enum - en typ av lista som erik har lärt mig använda (man kan sätta startvärdet - tex 1 istället för 0)
+bool - sant/falskt värden
+int - nummer
+double - nummer med decimal
+string - innehåller text
+
+5.
+Stack - först in först ut (tänk lager på lager). Håller på variablers värden, Push vs Pop för att ta in / ut värden.
+
+Heap - Lagrar objekt. Objekten kan tas in och ut hur som helst. GC i CLR tar hand om dumpningen dvs, ingen push/pop.
+
+6. En variabel är en typ med ett namn som håller i ett värde, int, string, field, array etc.
+Den skapas genom deklarering, tex: int myNum = 10; eller string myName = "Mitt namn";
+Värdet är den delen som kommer efter = tecknet. Med andra ord är string myName en deklarering.

@@ -1,0 +1,64 @@
+﻿Vad står CLR för, och vad används den till?
+CLR (common language runtime) är en del av .net ramverket som kontrollerar exekveringen av program. Som namnet säger klarar CLR av fler programmeringsspråk, tex VB och C++. Genom lagrad metadata i det kompilerade progammet säger programmet till CLR vilket språk programmet är skrivet i.
+
+Vad är BCL?
+BCL (base class library) är ett bibliotek av funktioner som innehåller grundläggande system funktioner som används för att köra program i språket C#.
+
+Vad innebär det att kompilera källkod?
+Att kompilera källkod innebär att omvandla källkod till ett program som kan köras och utföra funktioner etc. För att kompilera kod behövs en kompilator som läser in källkoden och spottar ut tex en .exe eller .dll fil(er)
+
+Den första kompileringen av källkod genererar en assembly i CIL-format. Vad står CIL för?
+CIL står för Common Intermediate Language.
+
+Vad kallas den andra kompileringen, dvs den som tar en assembly på CIL-format och 
+omvandlar till maskinkod? Här bör du känna till både förkortning och vad den står för. När sker denna kompilering normalt?
+Kompileringsmetoden du letar efter heter Just In Time (JIT) och dess jobb är att kompilera källkoden för det valda systemet vid det valda tillfället.
+
+Nämn en fördel och en nackdel med att .NET-program körs i en runtime-miljö.
+En fördel är att användaren inte behöver kompilera distributionsfilerna till maskinkod
+En nackdel är att användaren måste kompilera koden tillskillnad från om det redan
+är kompilerat.
+
+Vad är en identifierare?
+En identifierare är ett namn på en variabel som bestämmer vilken typ av variabel det är, tex int eller double.
+
+Hur får en identifierare se ut?
+den bör skrivas med camelcase tex: int = myNumber
+
+Vad är camel case och pascal case?
+came case och pascal case är ett sätt formatera utskriften av ett ord i ett namn.
+Med camel case skriver man ihop två eller flera ord där man sätter första bokstaven i alla utom det första ordet i versaler, tex: camelCase.
+Pascal case fungerar på ett liknande sätt där den största skillnaden är att man sätter alla ords första bokstav i versaler tex: PascalCase.
+
+Vad är nyckelord?
+Ett nyckelord är ett ord som används av systemet och bör således inte användas till att namnge en funktion eller variabel. tex double = double.
+
+Vad innebär det att C# är case sensitive?
+Det innebär att språket skiljer på variabler och funktioner som är utskrivna med versaler och gemener på olika ställen, tex: myFunction, myfunction och MYFUNCTION är tre olika metoder.
+
+Kompilatorn struntar i s.k. whitespace, men för tydlighetens skulle bör alltid källkod 
+formatteras för maximal läsbarhet. Nämn ett par olika typer av whitespace.
+Whitespace är tomma områden: områden råden som inte innehåller ngt tex: &nbsp.
+Olika typer av whitespace är tomma element i en array eller \t och \n
+
+Vilket tecken används för att avsluta ("terminera") ett uttryck?
+; (semicolon)
+
+Flera uttryck kan grupperas tillsammans till ett s.k. block, t.ex. för att utföras tillsammans om ett villkor är uppfyllt. Hur grupperas uttryck?
+Genom {}
+
+När bör källkod kommenteras? Vilka olika kommentarstyper finns, och hur anges de?
+När man vill förklara ngt eller visa vart ngt startar/slutar
+/* */
+//
+///
+
+Uppgift 4
+lite filer i debug försvann
+.pdb
+namn
+namn.exe
+
+.vshost filerna ligger kvar
+
+i obj försvann en hel hög med filer

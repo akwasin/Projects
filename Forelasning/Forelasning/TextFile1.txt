@@ -1,0 +1,53 @@
+﻿CIL - common intermediate language
+
+CLR - common language runtime
+	- Virutell Maskin
+	- Interpretatorn > översätter CIL till Maskinkod
+	- JIT kompilator (just in time) > gör jobbet när det behövs
+
+Interoperabilitet - kan köras av alla datorer/OS (synergi?)
+
+Namnkonvention >
+
+Identifierare - det vi själva döper
+				använd vettiga namn
+				klasser, metoder, variabler
+				undvik nyckelord
+
+PascalCase - varje nytt ord börjar med stor bokstav > på klasser, metoder, enum etc.
+
+camelCase	- bara ord #2 börjar med stor bokstav
+			- används till variabler/fält
+			- underscore framför private variabler (som ID)
+			- tex int _mySecret = 9
+
+UPPERCASE	- hela ordet har stor bokstav
+			- konstanter tex PI
+
+Åtkomstdirektiv	- Protected	> Inom samma klass + arv
+				- Public > Kan nås överallt
+				- Internal > Inom samma namespace(klass)
+				- Internal Protected > Inom samma namespace
+				- Private > Bara access av sig själv (metod)
+
+Ramminnet		- Stack (endast det översta objektet kan tas bort)
+				- Heapen
+
+Variabler		- ligger det innanför en metod är det en Variabel
+Fält/field		- Är en variabel utanför en metod, direkt inne i en class (utanför main)
+Obj Orien		- Detta är en av kriterierna för objekt orientering
+
+Static			- Det kan bara finnas 1. den har alla access till. 
+
+// är en inkapsling för projektet, kallas för assembly, projekt eller namepace
+namespace Forelasning
+{
+    class Program_Beskrivning // inkapsling av en klass
+    {
+        // static void main är metoden som startar  hela programmet
+            Console.WriteLine(args[0]);
+            // console tillhör tangentbord, skärm, input output
+            //Console.WriteLine("hejhej");
+            Console.ReadLine();
+    }
+}

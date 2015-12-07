@@ -1,0 +1,9 @@
+﻿- AlarmClock
+	- time: int
+	- alarmTime: int
+	- alarmOn: bool
+		
+		+ SetTime(int hours, int minutes)
+		+ GetTime(): int
+		+ SetAlarm(int hours, int minutes)
+		+ TurnAlarmOn(Bool isOn)

@@ -1,0 +1,27 @@
+﻿// Kapitel 6 i boken
+
+	Egenskaper för classer
+		- Datamedlemmar, field fält
+		- Konstanter
+		// vi kan göra dessa, public, private, static, const
+		// static metoder får bara finnas i 1 upplaga (kan modiferas etc)
+
+	Funktionella medlemmar:
+		- Metoder
+		- Properties
+		- Constructor
+		- Destructor (går emot objekt orientering, exit mode)
+		- Operatorer (addition, subtraktion etc)
+		- Indexer (en samling av ngt, egenskaper likt property för klasser)
+		- Event (händelser, används sällan i consol apps)
+
+// implicit man får det på köpet
+// explicit man får göra något extra
+
+		- En constructor används frö att skapa/kontruera ett object
+		- Ser ut som en metod fast har samma namn som klassen
+		- defaultkontruktor  som har inga inparametrar
+		- kontruktorn körs alltid när new anropas på berörd klass
+		- man kan skapa överlagrade kontruktorer med inparametrar i
+		- kontruktorn bygger upp obbjektet//klassen
+		- inget retur värde

@@ -8,7 +8,7 @@ namespace Forelasning_10
 {
     class Program
     {
-        public void Main(string[] args)
+        static void Main(string[] args)
         {
 
             #region
@@ -33,9 +33,14 @@ namespace Forelasning_10
             //Console.WriteLine();
             #endregion
 
-            Animal katt = new Cat();
-            Animal hund = new Dog();
+            Animal katt = new Cat() { Name = "Kajsa"};
+            Animal hund = new Dog() { Name = "Dogelito" };
 
+            katt.PrintInfo();
+            hund.PrintInfo();
+
+            Console.WriteLine(hund);
+            Console.WriteLine(katt);
 
             System.Threading.Thread.Sleep(10000);
         }

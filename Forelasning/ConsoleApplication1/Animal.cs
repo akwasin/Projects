@@ -11,5 +11,7 @@ namespace Forelasning_10
         public string Name { get; set; } // = "Defaultl värde";
 
         public abstract void PrintInfo();
+
+        public override string ToString() => $"Name: {Name}";
     }
 }

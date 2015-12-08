@@ -10,6 +10,7 @@ namespace Laboration1
     {
         StockItem[] stockItem = new StockItem[10];
 
+        // add item metod som håller sig inom ramarna
         public StockItem[] StockItem
         {
             get

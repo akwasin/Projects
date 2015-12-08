@@ -10,7 +10,7 @@ namespace Laboration1
     {
         private int id;
         private string name;
-        private int stockCount;
+        static int stockCount;
 
         public int Id
         {
@@ -55,15 +55,23 @@ namespace Laboration1
             }
         }
 
-        public StockItem(string name, int id, int stockCount, string markning)
+
+        //static StockItem()
+        //{
+        //    stockCount = 0;
+        //}
+        public StockItem(string name, int id, string markning)
         {
             this.Name = name;
             this.Id = id;
-            this.StockCount = stockCount;
+            stockCount++;
         }
+
         public StockItem()
         {
-
         }
+
+        public override string ToString() => $"Name {Name}\n\rID: {Id}\n\rAntal: {StockCount}";
+
     }
 }

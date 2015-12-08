@@ -27,10 +27,10 @@ namespace Laboration1
                     throw new Exception("Wrong value!");
             }
         }
-       public EcoStockItem(string markning) 
-        {
-            this.Markning = markning;
-        }
+       //public EcoStockItem(string markning) 
+       // {
+       //     this.Markning = markning;
+       // }
 
     }
 }

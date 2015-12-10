@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Forelasning_12_Listor
 {
-    class Flygplan
+    class Flygplan //: IComparable<flygplan>
     {
-        public int Seats { get; set; }
-        public int Pilots { get; set; }
+        public int Seats { get; internal set; } // access level på propertyn 
+        public int Pilots { get; internal set; }
 
         public Flygplan(int seats, int pilots)
         {
@@ -22,5 +22,12 @@ namespace Forelasning_12_Listor
         {
             return $"Seats: {Seats}, Pilots {Pilots}";
         }
+
+       /* public int CompareTo(object obj)
+        {
+            Flygplan testPLane = (Flygplan) obj;
+            // returnerar -1, 0 eller 1
+            testPLane.Seats.CompareTo(this.Seats);
+        }*/
     }
 }

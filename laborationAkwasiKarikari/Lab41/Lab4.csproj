@@ -46,7 +46,7 @@
     <Compile Include="Bil.cs" />
     <Compile Include="Cykel.cs" />
     <Compile Include="Hjul.cs" />
-    <Compile Include="interfaceInput.cs" />
+    <Compile Include="InterfaceInput.cs" />
     <Compile Include="Ipad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
-    class Ipad : interfaceInput
+    class Ipad : InterfaceInput
     {
         private string color;
         private double screenSize;

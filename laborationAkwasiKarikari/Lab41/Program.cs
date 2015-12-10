@@ -25,7 +25,7 @@ namespace Lab4
 
             Ipad ipadEtt = new Ipad() { FourGee = true };
 
-            //Console.WriteLine(ipadEtt);
+            Console.WriteLine(ipadEtt);
             Console.WriteLine(ipadEtt.FourGee);
             System.Threading.Thread.Sleep(20000);
         }

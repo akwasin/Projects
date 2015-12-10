@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab4
 {
-    class interfaceInput
+    class InterfaceInput
     {
         private string inputTouch;
         private string thunderBolt;

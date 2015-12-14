@@ -4,46 +4,126 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Laboration1
+namespace Kodninggg
 {
     class Program
     {
-
-        // TODO: while (stockitem[].length < 10) så ställ frågorna && counter++ (lägg till 1 på counter alternativt, while bool = true, ställ frågorna, sätt break på 4 - avsluta-)
-        
         static void Main(string[] args)
         {
-            // StockItem item1 = new StockItem() { Name = "namn" };
-            //Console.WriteLine(item1);
-            StockItem item1 = new StockItem() { Name = "Orange"};
+          WareHouseMethod();
+        }
+        private static void WareHouseMethod()
+        {
+            int stockItemChoice;
+            bool validInput = false;
+            int itemChoice;
+            Stock stock = new Stock();
+            bool retry = true;
 
-            Console.WriteLine("1 - Skapa vara");
-            Console.WriteLine("2 - Inventera vara");
-            Console.WriteLine("3 - Lista varor");
-            Console.WriteLine("4 - Avsluta");
-            string userinput = Console.ReadLine();
-            if (userinput == "1")
+            while (retry)
             {
-                Console.WriteLine("Vad heter din vara");
-                item1.Name = Console.ReadLine();
-                //Console.WriteLine(item2.Name);
-            }
-            else if (userinput == "2")
-            {
-                Console.WriteLine($"Hur många {item1.Name} finns?");
-                item1.StockCount = (int.Parse(Console.ReadLine()));
-                Console.WriteLine($"Det finns {item1.StockCount}st {item1.Name}");
-                Console.ReadKey();
-            }
-            else if (userinput == "3")
-            {
-                Console.WriteLine("en array");
+                Meny.PrintMeny();
+                string choice = Console.ReadLine();
+                switch (choice)
+                {
+                    case ("1"):
+                        stockItemChoice = CreateStockItem(stock);
+                        break;
+                    case ("2"):
+                        InventoryItems(out validInput, itemChoice, stock);
+                        break;
+                    case ("3"):
+                        ListAllItems(stock);
+                        break;
+                    case ("4"):
+                        retry = ExitLoop();
+                        break;
+                    default:
+                        Console.WriteLine("You picked a wrong number.");
+                        break;
+                }
                 Console.ReadLine();
-            }
-            else
-            {
-                System.Threading.Thread.Sleep(1000);
+                Console.Clear();
             }
         }
+
+        private static bool ExitLoop()
+        {
+            bool retry;
+            Console.WriteLine("Stop");
+            retry = false;
+            return retry;
+        }
+
+        private static void ListAllItems(Stock stock)
+        {
+            Console.WriteLine("Lista Varor");
+            for (int i = 0; i < stock.stockItems; i++)
+            {
+                if (stock.stockItems[i] is EcoStockItem && stock.stockItems[i] != null)
+                {
+                    Console.WriteLine(stock.GetItem(i));
+                }
+                else if (stock.stockItems[i] != null)
+                {
+                    Console.WriteLine(stock.GetItem(i));
+                }
+            }
+        }
+
+        private static void InventoryItems(out bool validInput, out int ItemChoice, Stock stock)
+        {
+            Console.WriteLine("Inventera Varor");
+            for (int i = 0; i < stock.stockItems.Length; i++)
+            {
+                if (stock.stockItems[i] != null)
+                {
+                    Console.WriteLine(i.ToString() + " " + stock.GetItems(i));
+                    Console.WriteLine("Välj en vara genom att skriva numret");
+                }
+            }
+            validInput = int.TryParse(Console.ReadLine(), out ItemChoice);
+            if (validInput)
+            {
+                Console.WriteLine("Skriv in ett nytt stock count");
+                stock.stockItems[ItemChoice].StockCount = int.Parse(Console.ReadLine());
+            }
+            else
+                throw new Exception("Please write a number");
+        }
+
+        private static int CreateStockItem(Stock stock)
+        {
+            int stockItemChoice;
+            Console.WriteLine("1. Create stock item");
+            Console.WriteLine("2. Create Juice");
+            Console.WriteLine("3. Create Plate");
+            stockItemChoice = int.Parse(Console.ReadLine());
+            if (stockItemChoice == 1)
+            {
+                Console.WriteLine("Create a stock item and add to stock");
+                Console.WriteLine("Write the number of the item in stock and name of the item");
+                StockItem stockItem = new StockItem() { Id = stock.counter, stockCount = int.Parse(Console.ReadLine(), Name = Console.ReadLine())};
+                stock.AddItem(stockItem);
+            }
+            else if (stockItemChoice == 2)
+            {
+                Console.WriteLine("Create stock item and add to stock");
+                Console.WriteLine("Write the eco mark EG or Krav, the juice type, the number of the item in stock and the name of the item");
+                Juice juice = new Juice() { Mark = Console.ReadLine(), Flavor = Console.ReadLine(), Id= stock.counter, StockCount = int.Parse(Console.ReadLine()), Name = Console.ReadLine() };
+                stock.AddItem(juice);
+            }
+            else if (stockItemChoice == 3)
+            {
+                Console.WriteLine("Create stockitem and add to stock");
+                Console.WriteLine("Write type of the plate, number of the item in stock and name of the item in that order");
+                Plate plate = new Plate() { Type = Console.ReadLine(), Id = stock.counter, StockCount = int.Parse(Console.ReadLine())};
+                stock.AddItem(plate);
+            }
+            return stockItemChoice;
+        }
+
+
+
     }
 }

@@ -1,0 +1,5 @@
+﻿Enum
+	- tallitteraler som är konstanter
+	- ko	llektino av konstanter
+	- syntax: enum Identifierare {konstant1 = 7, konstant2, }
+	- Enum har automatisk ToString i samma namn som man anger

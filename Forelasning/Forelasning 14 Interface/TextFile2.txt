@@ -1,0 +1,18 @@
+﻿Interface
+
+	- liknar syntaxen för en klass
+	- har ingen implementation/likt en abstrakt klass
+	- kan innehålla: 
+		- event
+		- metoder
+		- indexer
+		- properties
+	- Tvinga till arm som implementerar interfaced
+	- Ett Kontrakt
+	- Gränssnittet(interface) tvingar komponenter att bete sig på ett visst sätt
+
+	Finns det en metod: MethodC(); i interfaced IMetod och MyClass 
+	ärver från IMetod måste MethodC(); deklereras i MyClass.
+	- på så sätt tvingas implementering från interfaced
+
+	- Plug N Play - utbytbara komponenter

@@ -8,23 +8,25 @@ namespace Laboration1
 {
     class Juice : EcoStockItem
     {
-        private string typ;
+        private string juiceTyp;
 
-        public string Typ
+        public string JuiceTyp
         {
-            get
-            {
-                return typ;
-            }
+            get { return juiceTyp; }
 
             set
             {
-                var typValue = value == "Apple" || value == "Orange";
+                var typValue = value == "Apple" || value == "apple" || value == "Orange" || value == "orange";
                 if (value != null && typValue)
-                    typ = value;
+                    juiceTyp = value;
                 else
-                    throw new Exception("Wrong value!");
+                    throw new Exception("Fel typ, prova igen");
             }
+        }
+
+        public override string ToString()
+        {
+            return $"Typ: {juiceTyp} " + base.ToString();
         }
     }
 }

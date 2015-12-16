@@ -8,8 +8,8 @@ namespace Laboration1
 {
     class StockItem
     {
-        private int id;
-        private string name;
+        int id;
+        string name;
         static int stockCount;
 
         public int Id
@@ -18,14 +18,11 @@ namespace Laboration1
             {
                 return id;
             }
-
             set
             {
-
                 id = value;
             }
         }
-
         public string Name
         {
             get
@@ -38,40 +35,21 @@ namespace Laboration1
                 name = value;
             }
         }
-
         public int StockCount
         {
             get
             {
                 return stockCount;
             }
-
             set
             {
                 if (value >= 0 && value <= 5000)
                     stockCount = value;
                 else
-                    throw new Exception("Wrong Value");
+                    throw new Exception("Fel värde");
             }
         }
-
-
-        //static StockItem()
-        //{
-        //    stockCount = 0;
-        //}
-        public StockItem(string name, int id, string markning)
-        {
-            this.Name = name;
-            this.Id = id;
-            stockCount++;
-        }
-
-        public StockItem()
-        {
-        }
-
-        public override string ToString() => $"Name {Name}\n\rID: {Id}\n\rAntal: {StockCount}";
+        public override string ToString() => $"Namn {Name}\n\rID: {Id}\n\rAntal: {StockCount}\n\r";
 
     }
 }

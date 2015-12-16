@@ -8,15 +8,26 @@ namespace Laboration1
 {
     class Stock
     {
-        StockItem[] stockItem = new StockItem[10];
-
-        // add item metod som håller sig inom ramarna
-        public StockItem[] StockItem
+        public int counter = 0;
+        public StockItem[] stockItems = new StockItem[50];
+        public StockItem this[int index]
         {
-            get
+            get { return stockItems[index];  }
+            set { stockItems[index] = value; }
+        }
+
+        public void AddStockItem(StockItem item)
+        {
+            if (counter < stockItems.Length)
             {
-                return stockItem;
+                this[counter] = item;
+                counter++;
             }
+        }
+
+        public StockItem GetItem(int id)
+        {
+            return stockItems[id];
         }
     }
 }

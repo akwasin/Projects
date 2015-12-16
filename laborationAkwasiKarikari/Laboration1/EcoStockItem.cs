@@ -8,29 +8,28 @@ namespace Laboration1
 {
     class EcoStockItem : StockItem
     {
-        private string markning;
+        private string markningTyp;
 
-        public string Markning
+        public string MarkningTyp
         {
             get
             {
                 
-                return markning;
+                return markningTyp;
             }
 
             set
             {
-                var ecoValue = value == "Krav" || value == "EG";
-                if (value != null && ecoValue)
-                    markning = value;
+                var markningVal = value == "Krav" || value == "krav" || value == "EG" || value == "eg";
+                if (value != null && markningVal)
+                    markningTyp = value;
                 else
                     throw new Exception("Wrong value!");
             }
         }
-       //public EcoStockItem(string markning) 
-       // {
-       //     this.Markning = markning;
-       // }
-
+        public override string ToString()
+        {
+            return $"Märkning: {markningTyp} " + base.ToString();
+        }
     }
 }

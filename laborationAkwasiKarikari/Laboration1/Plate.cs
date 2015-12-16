@@ -10,22 +10,22 @@ namespace Laboration1
     {
         private string typ;
 
-        public string Typ
-        {
-            get
-            {
-                return typ;
-            }
-
-            set
-            {
-                if (value == "Flat" || value == "Deep" && value !=null )
+        public string Typ {
+            get { return typ; }
+            set {
+                if (value == "Flat" || value == "flat" || value == "Deep" || value == "deep")
                 typ = value;
                 else
                 {
-                    throw new Exception("Wrong value!");
+                    throw new Exception("Fel typ av tallrik, prova igen");
                 }
             }
         }
+
+        public override string ToString()
+        {
+            return $"Typ: {typ} " + base.ToString();
+        }
+
     }
 }
